@@ -4,11 +4,24 @@ import MyButton from "./MyButton";
 
 const Counter = () => {
     const [count, setCount] = useState(0);
+    const [double, setDouble] = useState(0);
     return(
         <View style={{ alignItems : 'center'}}> 
-            <Text style={{ fontSize:30, margin:10 }}>[count]</Text>
-            <MyButton title="+1" onPress={() => setCount(count + 1)}/>
-            <MyButton title="-2" onPress={() => setCount(count - 1)}/>
+            <Text style={{ fontSize:30, margin:10 }}>Count : {count}</Text>
+            <Text style={{ fontSize:30, margin:10 }}>Double : {double} </Text>
+
+            <MyButton 
+            title="+" 
+            onPress={() => {
+                setCount(count + 1);
+                setDouble(count + 2);
+                }}/>
+            <MyButton 
+            title="-" 
+            onPress={() => {
+                setCount(count - 1);
+                setDouble(count - 2);
+                }}/>
         </View>
     ) 
 }

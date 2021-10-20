@@ -1,6 +1,9 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import MyButton from './src/components/MyButton';
+import Counter from './src/components/Counter';
+import EventButton from './src/components/EventButton';
+import EventInput from './src/components/EventInput';
 
 const App = () => {
     return(
@@ -29,6 +32,9 @@ const App = () => {
                 Children Props
             </MyButton>
             <MyButton onPress={() => alert('default')}/>
+            <Counter/>
+            <EventButton />
+            <EventInput />
         </View>
     );
 };
